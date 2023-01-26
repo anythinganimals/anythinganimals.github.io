@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap');
+
+@font-face {
+    font-family: "Cantarell var";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("Cantarell-VF.otf") format("opentype");
+}
+
+p {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size: 1.2em;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2{
+    font-family: Solitreo, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 4em;
+}
+
+h2{
+    font-size: 3em;
+}
+
+.text{
+    background-color: #287C27;
+}
+
+.text > p{
+    padding: 60px;
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.text > *{
+    transform: scale(0.5);
+    transition: transform 0.5s;
+}
+
+.text.scrolld > *{
+    transform: scale(1);
+}
+
+.parallax{
+    height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax.nopara{
+    background-attachment: initial;
+    background-position: top;
+}
+
+.parallax#para-1{
+    background-image: url("res/production/para-1.jpg");
+}
+
+.parallax#para-2{
+    background-image: url("res/production/para-2.jpg");
+}
+
+.parallax#para-3{
+    background-image: url("res/production/para-3.jpg");
+}
+
+#head{
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 15vh;
+    padding-top: 15vh;
+    background-color: #252323;
+}
+
+@media screen and (min-width:1200px) {
+    .text > p{ /* Remove the .parallax part when you finally convince Beatrix that margins ain't all that za */
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+    #title-block{
+        flex-direction: row !important;
+    }
+    .carousel>img {
+        height: 60vh !important;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #block {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        width: auto !important;
+    }
+
+    #contact {
+        margin-top: 15vh;
+        margin-bottom: 5vh;
+    }
+
+    #head{
+        padding-bottom: 0px;
+    }
+    
+    #block>* {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+#bottom > p {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    text-align: center;
+    background-color: #222222;
+    color: white;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    font-family: Cantarell-VF, sans-serif;
+}
+
+#title-block{
+    display: flex;
+    flex-direction: column;
+}
+
+#head{
+    flex-grow: 1;
+    text-align: right;
+}
+
+#block{
+    background-color: #68B101;
+    padding: 20px;
+    font-family: Cantarell, sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    width: 30vw;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.carousel > img{
+    margin: min(0vw, 0vh);
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 40vh;
+    opacity: 0.5;
+    transform: scale(0.7);
+    transition: transform 1s;
+}
+
+.carousel > img:first-child{
+    margin-left: 100vw;
+}
+
+.carousel > img:last-child{
+    margin-right: 100vw;
+}
+
+.carousel > .show{
+    opacity: 1;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    transform: scale(1);
+}
+
+.shadowbox{
+    background-color: black;
+    padding: 10vh 30vw 10vh 30vw;
+}
+
+.shadowbox > *{
+    border: 1px solid blue;
+}
+
+#shadowboi{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    display: none;
+}
+
+#shadowboi.show{
+    display: initial;
+}
+
+#shadowboi > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo{
+    padding-left: 20%;
+    padding-right: 20%;
+    box-sizing: border-box;
+}
+
+#contact {
+    border: none;
+    font-size: 1.1em;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #287C27;
+    margin-right: 10vw;
+}
+
+#contact:hover{
+    background-color: black;
+    color: #287C27;
+}
+
+#contactboi{
+    background-color: rgba(112, 112, 112, 0.8);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+#contactboi > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: inline-block;
+    padding: min(10vw, 10vh);
+    background-color: grey;
+}
